@@ -6,7 +6,7 @@
   "license": "GPL-3.0",
   "main": "src/index.js",
   "scripts": {
-    "build": "yarn run test && npx tsc --build --clean && npx tsc --build --verbose",
+    "build": "npm run test && npx tsc --build --clean && npx tsc --build --verbose",
     "test": "jest --detectOpenHandles src",
     "test-watch": "jest --watch --verbose --detectOpenHandles src"
   },
