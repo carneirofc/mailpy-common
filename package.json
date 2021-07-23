@@ -4,17 +4,17 @@
   "description": "Mailpy Common",
   "author": "Claudio Carneiro",
   "license": "GPL-3.0",
-  "main": "src/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "prepare": "npm run build-ts-es",
-    "build-ts-cjs": "tsc --build --verbose tsconfig-cjs.json",
-    "build-ts-es": "tsc --build --verbose tsconfig.json",
+    "build-ts-cjs": "npx tsc --build --verbose tsconfig-cjs.json",
+    "build-ts-es": "npx tsc --build --verbose tsconfig.json",
     "clean": "npm run clean-es && npm run clean-cjs",
     "clean-es": "tsc --build --clean tsconfig.json",
     "clean-cjs": "tsc --build --clean tsconfig-cjs.json",
     "build": "npm run test && npm run clean && npm run build-ts-es && npm run build-ts-cjs",
-    "test": "jest --detectOpenHandles src",
-    "test-watch": "jest --watch --verbose --detectOpenHandles src"
+    "test": "npx jest --detectOpenHandles src",
+    "test-watch": "npx jest --watch --verbose --detectOpenHandles src"
   },
   "repository": {
     "type": "git",
