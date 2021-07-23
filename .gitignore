@@ -42,6 +42,7 @@ logs
 node_modules/
 npm-debug.log*
 pids
+tsconfig-build.tsbuildinfo
 typings
 yarn-debug.log*
 yarn-error.log*

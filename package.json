@@ -6,13 +6,12 @@
   "license": "GPL-3.0",
   "main": "dist/src/index.js",
   "scripts": {
-    "prepare": "npm run build-ts-es",
-    "build-ts-cjs": "npx tsc --build --verbose tsconfig-cjs.json",
-    "build-ts-es": "npx tsc --build --verbose tsconfig.json",
-    "clean": "npm run clean-es && npm run clean-cjs",
+    "prepare": "npm run build",
+    "build-ts": "npx tsc --build --verbose tsconfig-build.json",
+    "clean": "npm run clean-es && npm run clean-build",
     "clean-es": "tsc --build --clean tsconfig.json",
-    "clean-cjs": "tsc --build --clean tsconfig-cjs.json",
-    "build": "npm run test && npm run clean && npm run build-ts-es && npm run build-ts-cjs",
+    "clean-build": "tsc --build --clean tsconfig-build.json",
+    "build": "npm run test && npm run clean && npm run build-ts",
     "test": "npx jest --detectOpenHandles src",
     "test-watch": "npx jest --watch --verbose --detectOpenHandles src"
   },
