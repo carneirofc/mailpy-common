@@ -7,9 +7,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepare": "npm run build-ts",
+    "prepare": "npm run build-ts && find dist/ -maxdepth 1 -mindepth 1 -type d -exec ln -f -v -s {} . \\;",
     "build-ts": "npx tsc --build --verbose tsconfig-build.json",
-    "clean": "npm run clean-es && npm run clean-build",
+    "clean": "npm run clean-es && npm run clean-build && rm -rvf dist/",
     "clean-es": "tsc --build --clean tsconfig.json",
     "clean-build": "tsc --build --clean tsconfig-build.json",
     "build": "npm run test && npm run clean && npm run build-ts",

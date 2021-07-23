@@ -1,4 +1,4 @@
-import buildMakeUser from "./user";
+import { buildMakeUser } from "./user";
 import { buildMakeGroup, buildMakeEntry, buildMakeCondition } from "./mailpy";
 
 export * from "./user";

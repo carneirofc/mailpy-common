@@ -1,3 +1,5 @@
+export * from "./errors";
+
 /**
  * Deep copy function for TypeScript.
  * @param T Generic type of target/copied value.
@@ -19,7 +21,9 @@ export const deepCopy = <T>(target: T): T => {
     return cp.map((n: any) => deepCopy<any>(n)) as any;
   }
   if (typeof target === "object" && target !== {}) {
-    const cp = { ...(target as { [key: string]: any }) } as { [key: string]: any };
+    const cp = { ...(target as { [key: string]: any }) } as {
+      [key: string]: any;
+    };
     Object.keys(cp).forEach((k) => {
       cp[k] = deepCopy<any>(cp[k]);
     });

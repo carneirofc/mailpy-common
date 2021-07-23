@@ -44,7 +44,7 @@ export type User = {
   roles: Role[];
 };
 
-export default function buildMakeUser({}) {
+export function buildMakeUser({}) {
   return function makeUser({
     id,
     name,
