@@ -25,7 +25,12 @@ export interface Group {
   enabled: boolean;
   id?: string;
 }
-
+export interface Event {
+    id: string;
+    type: number;
+    ts: Date;
+    data: any;
+}
 export interface Entry {
   id: string;
   pvname: string;
